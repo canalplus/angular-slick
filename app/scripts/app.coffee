@@ -27,6 +27,7 @@ angular.module('slick', [])
       infinite: "@"
       initialSlide: "@"
       lazyLoad: "@"
+      nextSlidesToPreload: "@"
       onBeforeChange: "&"
       onAfterChange: "&"
       onInit: "&"
@@ -77,6 +78,7 @@ angular.module('slick', [])
             infinite: scope.infinite isnt "false"
             initialSlide:scope.initialSlide or 0
             lazyLoad: scope.lazyLoad or "ondemand"
+            nextSlidesToPreload: if scope.nextSlidesToPreload? then parseInt(scope.nextSlidesToPreload, 10) else 1
             onBeforeChange: if attrs.onBeforeChange then scope.onBeforeChange else undefined
             onAfterChange: (sl, index) ->
               scope.onAfterChange() if attrs.onAfterChange

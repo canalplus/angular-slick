@@ -28,6 +28,7 @@ angular.module('slick', []).directive('slick', [
         infinite: '@',
         initialSlide: '@',
         lazyLoad: '@',
+        nextSlidesToPreload: '@',
         onBeforeChange: '&',
         onAfterChange: '&',
         onInit: '&',
@@ -81,6 +82,7 @@ angular.module('slick', []).directive('slick', [
               infinite: scope.infinite !== 'false',
               initialSlide: scope.initialSlide || 0,
               lazyLoad: scope.lazyLoad || 'ondemand',
+              nextSlidesToPreload: scope.nextSlidesToPreload != null ? parseInt(scope.nextSlidesToPreload, 10) : 1,
               onBeforeChange: attrs.onBeforeChange ? scope.onBeforeChange : void 0,
               onAfterChange: function (sl, index) {
                 if (attrs.onAfterChange) {
