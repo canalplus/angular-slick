@@ -49,3 +49,9 @@ angular.module('MyApp', ['slick']);
 - If you wanna read about possible settings, go [here](http://kenwheeler.github.io/slick/#settings).
 
 That's it!
+
+### Canal+ addons:
+
+- Dynamic responsive attribute (use "=" instead of "@")
+- Add "nextSlidesToPreload" option
+- Add some delay for the carousel instanciation ("delay" option)

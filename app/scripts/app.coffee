@@ -50,6 +50,7 @@ angular.module('slick', [])
       vertical: "@"
       prevArrow:"@"
       nextArrow:"@"
+      delay:"@"
 
     link: (scope, element, attrs) ->
 
@@ -115,6 +116,7 @@ angular.module('slick', [])
             if currentIndex? and newVal? and newVal != currentIndex
               slider.slickGoTo(newVal)
           )
+        , scope.delay || 500
         )
 
       if scope.initOnload

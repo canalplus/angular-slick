@@ -50,7 +50,8 @@ angular.module('slick', []).directive('slick', [
         variableWidth: '@',
         vertical: '@',
         prevArrow: '@',
-        nextArrow: '@'
+        nextArrow: '@',
+        delay: '@'
       },
       link: function (scope, element, attrs) {
         var initializeSlick, isInitialized;
@@ -127,7 +128,7 @@ angular.module('slick', []).directive('slick', [
                 return slider.slickGoTo(newVal);
               }
             });
-          });
+          }, scope.delay || 500);
         };
         if (scope.initOnload) {
           isInitialized = false;
